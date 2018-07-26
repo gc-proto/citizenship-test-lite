@@ -100,6 +100,7 @@
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/wet-boew.min.css"/>
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/css/theme.css"/>
 <link rel="stylesheet" type="text/css" href="../../../css/custom.css" >
+<link rel="stylesheet" type="text/css" href="../../../css/data-inview.min.css">
 
 <!--[if gte IE 9 | !IE ]><!-->
 <link href="/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"/>
@@ -950,16 +951,44 @@
 </nav>
 
 
+<style>
 
-    <nav role="navigation" id="wb-bc" property="breadcrumb"><h2 class="wb-inv">You are here:</h2><div class="container"><div class="row"><ol class="breadcrumb">
-<li><a href='/en.html'>Home</a></li>
-<li><a href='/en/immigration-refugees-citizenship.html'>Immigration, Refugees and Citizenship Canada</a></li>
-<li><a href='/en/immigration-refugees-citizenship/corporate.html'>Corporate information</a></li>
-<li><a href='/en/immigration-refugees-citizenship/corporate/publications-manuals.html'>Publications and Manuals</a></li>
-<li><a href='/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada.html'>Study Guide – Discover Canada – The Rights and Responsibilities of Citizenship</a></li>
-<li><a href='/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada/read-online.html'>Discover Canada - Table of contents</a></li>
-</ol></div></div></nav>
+								.mobile-breadcrumb {
+									background: #f3f3f3;
+								}
+/*								.hide-breadcrumb-parents-mobile {
+									visibility: hidden;
+								}*/
+							@media screen and (max-width: 737px) {
+								#wb-bc li:before {
+								    color: #333;
+								    content: "<"!important;
+								    font-family: "Glyphicons Halflings";
+								    font-size: 1.5em;
+								}
+							}
+							@media screen and (min-width: 737px) {
+								.no-break-breadcrumb {
+									display: inline-block!important;
+								}
+							}
+              </style>
 
+<nav role="navigation" id="wb-bc" property="breadcrumb">
+  <h2 class="wb-inv">You are here:</h2>
+  <div class="container-fluid mobile-breadcrumb">
+    <div class="row">
+      <div class="container" style="padding-left:2px!important;">
+        <ol class="breadcrumb">
+          <li class="visible-md visible-lg no-break-breadcrumb cust-breadcrumb"><a href='../../../en.html'>Home</a></li>
+          <li class="visible-md visible-lg no-break-breadcrumb cust-breadcrumb"><a href='../../../immigration-refugees-citizenship.html'>Immigration, Refugees and Citizenship Canada</a></li>
+          <li class="visible-md visible-lg no-break-breadcrumb cust-breadcrumb"><a href='../../citizen-test.html'>Prepare for the Citizenship test</a></li>
+          <li class="cust-breadcrumb"><a href='table-of-contents.html'>Study guide</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</nav>
 
 
 
@@ -2100,5 +2129,6 @@ Chinese New Year celebration, Vancouver</p>
 <![endif]-->
 
 <script src="/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+<script src="../../../js/data-inview.min.js"></script>
 </body>
 </html>
