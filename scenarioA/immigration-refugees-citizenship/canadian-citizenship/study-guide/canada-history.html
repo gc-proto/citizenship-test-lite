@@ -1022,17 +1022,23 @@
 
     <main role="main" property="mainContentOfPage" class="container">
 
-
-
+<style>
+.overlay-def.wb-bar-t, .overlay-def.wb-bar-b {
+  background-color:white;
+}
+</style>
       <section class="wb-inview" data-inview="top-bar">
         <h1 class="no-gutter" id="wb-cont" dir="ltr" property="name">Discover Canada - Canada’s History</h1>
       </section>
 
       <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t">
         <header>
-          <h2 class="modal-title" style="color:black;">Canada's History</h2>
+          <!--add hamburger for TOC-->
+          <span onclick="overlayToc()" title="Open table of contents" style="float:left; margin-top:10px; margin-right: 10px;"><img style="height:45px;" src="../../../images/hamburger-full.png" /></span>
+          <h2 class="modal-title" style="color:black;float:left;">Canada's History</h2>
+          <!--add search icon for in-document search-->
+          <span onclick="overlayToc()" title="Open table of contents" style="float:right; margin-top:15px; margin-right: 10px;"><img style="height:40px;" src="../../../images/search.png" /></span>
         </header>
-        ...
       </section>
       <div class="mwsaccordion-html section">
 
