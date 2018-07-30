@@ -1037,13 +1037,59 @@
         <header>
 
 					<div style="display: flex; align-items: center; padding: 5px;">
-		      <span onclick="overlayToc()" title="Open table of contents" style="float:left; margin-top:10px; margin-right: 10px;"><img style="height:45px;" src="../../../../images/hamburger-full.png" /></span>
-		      <h2 style="flex:1;text-overflow: ellipsis; overflow: hidden; white-space: nowrap;color:black;">This is the only paragraph on this page, but it is very very long because that's what we need to test this scenario that isn't working in this ****** browser.</h2>
-		      <span class="flex-child short-and-fixed" onclick="overlayToc()" title="Open table of contents" style="float:right; margin-right: 10px;"><img style="height:40px;" src="../../../../images/search.png" /></span>
+		      <a href="#left-panel" aria-controls="left-panel" class="overlay-lnk" role="button" style="float:left; margin-top:10px; margin-right: 10px;"><img style="height:25px;padding-bottom:5px;" src="../../../../images/hamburger-full.png" /></a>
+		      <h2 style="flex:1; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;color:black; font-size:20px!important; padding-bottom:0px; margin-top:5px;">Canada's History</h2>
+		      <a class="overlay-lnk flex-child short-and-fixed" href="#left-panel" aria-controls="left-panel" role="button" style="float:right; margin-right: 10px;"><img style="height:23px; padding-top:5px;" src="../../../../images/search.png" /></span>
 		      </div>
         </header>
       </section>
+
+			<p><a href="#left-panel" aria-controls="left-panel" class="overlay-lnk" role="button">Table of contents</a></p>
+
+			<section id="left-panel" class="wb-overlay modal-content overlay-def wb-panel-l">
+				<header class="modal-header">
+					<h2 class="modal-title" style="color:black; font-size:20px!important;">Discover Canada</h2>
+				</header>
+				<div class="modal-body">
+					<p>Search within the document</p>
+					<!--document search box-->
+					<form name="Discover Canada search" method="GET" action="?" id="discover-canada-search">
+						<div class="input-group" id="recalls-search-box" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
+							<input type="text" class="ui-autocomplete-input" id="autocomplete-demo" name="q" value="" style="border: none;box-shadow: none;float: left; width: 100%;" autocomplete="off">
+							<button type="submit" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;">Find</button>
+						</div>
+					</form>
+
+					<p style="clear:both; padding-top:30px;">Chapters</p>
+					<p><a href="#" style="font-size: 14px;">Notice</a></p>
+					<p><a href="#" style="font-size: 14px;">Oath of Citizenship</a></p>
+					<p><a href="#" style="font-size: 14px;">Message</a></p>
+					<p><a href="#" style="font-size: 14px;">Applying for Citizenship</a></p>
+					<p><a href="#" style="font-size: 14px;">Rights and Responsibilities of Citizenship</a></p>
+					<p><a href="#" style="font-size: 14px;">Who We Are</a></p>
+					<p><a href="#" style="font-size: 14px;">Canada's History</a></p>
+					<p><a href="#" style="font-size: 14px;">Modern Canada</a></p>
+					<p><a href="#" style="font-size: 14px;">How Canadians Govern Themselves</a></p>
+					<p><a href="#" style="font-size: 14px;">Federal Elections</a></p>
+					<p><a href="#" style="font-size: 14px;">The Justice System</a></p>
+					<p><a href="#" style="font-size: 14px;">Canadian Symbols</a></p>
+					<p><a href="#" style="font-size: 14px;">Canada's Economy</a></p>
+					<p><a href="#" style="font-size: 14px;">Canada's Regions</a></p>
+					<p><a href="#" style="font-size: 14px;">Study Questions</a></p>
+					<p><a href="#" style="font-size: 14px;">For More Information and acknowledgements</a></p>
+					<p><a href="#" style="font-size: 14px;">Authorities</a></p>
+					<p><a href="#" style="font-size: 14px;">Memorable Quotes</a></p>
+
+				</div>
+			</section>
+
+
+
       <div class="mwsaccordion-html section">
+
+
+
+
 
 <!--    <h1 property="name" id="wb-cont" dir="ltr">
 Discover Canada - Canada’s History</h1>-->
