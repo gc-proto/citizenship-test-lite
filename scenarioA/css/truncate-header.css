@@ -8,12 +8,18 @@
   flex: 1;
   min-width: 0;
   position:relative;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .short-and-fixed {
   white-space: nowrap;
   display: inline-block;
+}
+
+.wb-overlay.open {
+  display: block!important;
+  position: fixed;
+  max-width: 500px;
 }

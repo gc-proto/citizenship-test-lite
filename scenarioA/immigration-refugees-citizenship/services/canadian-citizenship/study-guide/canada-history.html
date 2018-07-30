@@ -1036,19 +1036,11 @@
       <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t">
         <header>
 
-          <div class="flex-parent">
-
-            <!--add hamburger for TOC-->
-
-              <span onclick="overlayToc()" title="Open table of contents" style="float:left; margin-top:10px; margin-right: 10px;"><img style="height:45px;" src="../../../../images/hamburger-full.png" /></span>
-
-              <h2 class="modal-title flex-child long-and-truncated" style="color:black;float:left;">Canada's History</h2>
-
-            <div class="flex-child short-and-fixed">
-            <!--add search icon for in-document search-->
-              <span class="flex-child short-and-fixed" onclick="overlayToc()" title="Open table of contents" style="float:right; margin-top:15px; margin-right: 10px;"><img style="height:40px;" src="../../../../images/search.png" /></span>
-            </div>
-          </div>
+					<div style="display: flex; align-items: center; padding: 5px;">
+		      <span onclick="overlayToc()" title="Open table of contents" style="float:left; margin-top:10px; margin-right: 10px;"><img style="height:45px;" src="../../../../images/hamburger-full.png" /></span>
+		      <h2 style="flex:1;text-overflow: ellipsis; overflow: hidden; white-space: nowrap;color:black;">This is the only paragraph on this page, but it is very very long because that's what we need to test this scenario that isn't working in this ****** browser.</h2>
+		      <span class="flex-child short-and-fixed" onclick="overlayToc()" title="Open table of contents" style="float:right; margin-right: 10px;"><img style="height:40px;" src="../../../../images/search.png" /></span>
+		      </div>
         </header>
       </section>
       <div class="mwsaccordion-html section">
