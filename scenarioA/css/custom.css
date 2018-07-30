@@ -52,7 +52,7 @@ h5 {
 }
 
 
-body, header, nav#wb-bc {
+body, header, nav#wb-bc { 
 
 
 	background-color: white !important;
@@ -60,7 +60,7 @@ body, header, nav#wb-bc {
 
 	}
 
-	nav#wb-sm a { 
+	nav#wb-sm a {
 	font-family: 'Lato', sans-serif !important;
 	font-size: 17px !important;
 	}
