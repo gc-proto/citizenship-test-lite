@@ -4,13 +4,10 @@
   padding: 5px;
 }
 
-
 .long-and-truncated {
   flex: 1;
   min-width: 0;
-  /* or some value */
-}
-.long-and-truncated h2 {
+  position:relative;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -18,11 +15,5 @@
 
 .short-and-fixed {
   white-space: nowrap;
-}
-.short-and-fixed > div {
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  background: lightgreen;
   display: inline-block;
 }
