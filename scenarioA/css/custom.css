@@ -3,14 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext');
 
-
+/*
 h1 {
-
 	font-size: 36px !important;
 	font-weight: 700 !important;
 	font-family: 'Lato', sans-serif; !important;
 	margin-bottom: 20px;
-
 }
 
 
@@ -51,13 +49,9 @@ h5 {
 		padding-top: 6px !important;
 }
 
-
-body, header, nav#wb-bc { 
-
-
+body, header, nav#wb-bc {
 	background-color: white !important;
 	font-family: 'Lato', sans-serif;
-
 	}
 
 	nav#wb-sm a {
@@ -78,7 +72,7 @@ a.btn {
 font-family: 'Lato', sans-serif !important;
 font-size: 18px !important;
 }
-
+*/
 
 @media screen and (max-width: 991px) {
 
@@ -129,18 +123,14 @@ border-bottom: 2px solid RGB(255, 255, 255); }
 
 
 /* On this page, reducing size as an h2*/
+/*
 .smh3 {
-
 	font-size: 26px !important;
 	margin-bottom: 0px !important;
 	margin-top: 20px !important;
-
 }
 
 .onpage {
-
-
-
 }
 
 
@@ -151,15 +141,9 @@ ul.menu li {
 }
 
 p, ul, li, body {
-
-
 	font-size: 20px !important;
 	font-family: 'Lora', serif !important;
 	line-height: 34px !important;
-
-
-
-
 }
 
 strong {
@@ -182,6 +166,7 @@ caption, th {
 	font-family: 'Noto serif', sans-serif; !important;
 
 }
+*/
 
 /* controls bullet spacing */
 
@@ -203,45 +188,28 @@ caption, th {
 
 /* removing padding that pushes content down a lot */
 .breadcrumb {
-
 	margin-bottom: -10px !important;
 	padding-top: 2px !important;
 }
 
-
-
-
 .list-group-item {
-
-
-background-color: #F8F8F8;
-
+	background-color: #F8F8F8;
 	}
 
 /* menu items */
-
 .cust-small   {
-
 	margin-top: -3px !important;
 	font-size: 16px !important;
-
-
-
 }
 
 /* for the active menu item color */
-
 .cust-active   {
-
 	background-color: #4d4d4d !important;
 	border-color: #8f8f8f  !important;
-
 }
 
 .ch5 {
-
 	font-size: 18px !important;
-
 }
 
 abbr {
