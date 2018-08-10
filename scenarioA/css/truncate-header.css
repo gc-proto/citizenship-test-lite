@@ -21,7 +21,7 @@
 .wb-overlay.open {
   display: block!important;
   position: fixed;
-  max-width: 13em;
+  max-width: 19em;
 }
 
 
