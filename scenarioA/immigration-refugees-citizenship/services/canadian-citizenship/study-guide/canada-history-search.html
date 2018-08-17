@@ -264,7 +264,7 @@ function getSearchresults(q) {
 		$.ajax({
 		     url: uri,
 		     type: "GET", //This is what you should change
-				 /*crossDomain: true,*/
+				 crossDomain: true,
 				 dataType: "json",
 				  headers: {
 				    "Authorization": "Basic " + btoa("search" + ":" + "RuXbgK6?Xa@[QEbl")
