@@ -21,5 +21,26 @@
 .wb-overlay.open {
   display: block!important;
   position: fixed;
-  max-width: 13em;
+  max-width: 19em;
+}
+
+
+/*For the search interface*/
+#document_fulltext [data-role="content"] #fulltext-search {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(255,255,255, 0.8);
+    z-index: 10000;
+    border-bottom: 1px solid #000;
+}
+.highlighted {
+    color: white;
+    background-color: rgba(255,20,0,0.5);
+
+    padding: 3px;
+    border: 1px solid red;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 }

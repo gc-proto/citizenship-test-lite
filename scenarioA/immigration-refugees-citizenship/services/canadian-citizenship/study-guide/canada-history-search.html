@@ -189,41 +189,41 @@
 
 
 <style>
-			.mobile-breadcrumb {
-				background: #f3f3f3;
-			}
+
+								.mobile-breadcrumb {
+									background: #f3f3f3;
+								}
 /*								.hide-breadcrumb-parents-mobile {
-				visibility: hidden;
-			}*/
-		/*@media screen and (max-width: 737px) {*/
-			#wb-bc li:before {
-			    color: #333;
-			    content: "<"!important;
-			    font-family: "Glyphicons Halflings";
-			    font-size: 1.5em;
-			}
-		/*}*/
-		/*@media screen and (min-width: 737px) {*/
-			.no-break-breadcrumb {
-				display: inline-block!important;
-			}
-		/*}*/
-</style>
+									visibility: hidden;
+								}*/
+							@media screen and (max-width: 737px) {
+								#wb-bc li:before {
+								    color: #333;
+								    content: "<"!important;
+								    font-family: "Glyphicons Halflings";
+								    font-size: 1.5em;
+								}
+							}
+							@media screen and (min-width: 737px) {
+								.no-break-breadcrumb {
+									display: inline-block!important;
+								}
+							}
+              </style>
 <!--
-<nav role="navigation" id="wb-bc" property="breadcrumb">
-  <h2 class="wb-inv">You are here:</h2>
-  <div class="container-fluid mobile-breadcrumb">
-    <div class="row">
-      <div class="container" style="padding-left:2px!important;">
-        <ol class="breadcrumb">
-          <li class="cust-breadcrumb " style="display:inline;"><span style="color: #333; font-family: 'Glyphicons Halflings'; font-size: 1.5em;"><</span><span> </span><a href='table-of-contents.html'>Citizenship test study guide</a></li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</nav>-->
-
-
+							<nav role="navigation" id="wb-bc" property="breadcrumb">
+							  <h2 class="wb-inv">You are here:</h2>
+							  <div class="container-fluid mobile-breadcrumb" contextmenu="">
+							    <div class="row">
+							      <div class="container" style="padding-left:2px!important;">
+							        <ol class="breadcrumb" style="margin-bottom:3px!important;">
+							          <li class="cust-breadcrumb " style="display:inline;"><span style="color: #333; font-family: 'Glyphicons Halflings'; font-size: 1.5em;"><</span><span> </span><a href='table-of-contents.html'>Citizenship test study guide</a></li>
+							        </ol>
+							      </div>
+							    </div>
+							  </div>
+							</nav>
+-->
 
 
 </header>
@@ -310,6 +310,7 @@
 
 
 		    </details>
+
       </section>
 
       <section id="top-bar" class="wb-overlay modal-content overlay-def wb-bar-t">
@@ -334,17 +335,12 @@
 					<p><a href="#" style="font-size: 16px;"><!--Découvrir le Canada: en -->Français</a></p>
 					<p>Search within the document</p>
 					<!--document search box-->
-					<div class="input-group" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
-						<input type="text" size="25" maxlength="25" id="fwtext-overlay" onchange="resettext();" style="border: none;box-shadow: none;float: left; width: 100%;" autocomplete="off">
-						<button type="button" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;"><a href="canada-history-search.html">Find</a></button>
-					</div>
-
-					<!--<form>
+					<form>
 						<div class="input-group" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
 							<input type="text" size="25" maxlength="25" id="fwtext-overlay" onchange="resettext();" style="border: none;box-shadow: none;float: left; width: 100%;" autocomplete="off">
 							<button type="button" onclick="findit();" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;">Find</button>
 						</div>
-					</form>-->
+					</form>
 
 					<!-- search html -->
 					<!-- ÷	Type in text to find: -->
@@ -355,46 +351,11 @@
 
 
 
-
-					<p style="clear:both; padding-top:30px;">Chapters</p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Notice</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Oath of Citizenship</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Message</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Applying for Citizenship</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Rights and Responsibilities of Citizenship</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Who We Are</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none; border-left: 3px purple solid; padding-left: 5px;">Canada's History</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Aboriginal Peoples</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The First Europeans</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Exploring a River, Naming Canada</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Royal New France</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Struggle for a Continent</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The Province of Quebec</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">A Tradition of Accommodation</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">United Empire Loyalists</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Abolition of Slavery</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">A Growing Economy</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Rebellions of 1837–38</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Responsible Government</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Confederation</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Challenge in the West</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Moving Westward</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The First World War</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Women Get the Vote</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Between the Wars</a></p>
-					<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The Second World War</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Modern Canada</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">How Canadians Govern Themselves</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Federal Elections</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">The Justice System</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Canadian Symbols</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Canada's Economy</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Canada's Regions</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Study Questions</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">For More Information and acknowledgements</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Authorities</a></p>
-					<p><a href="#" style="font-size: 16px; text-decoration:none;">Memorable Quotes</a></p>
-
+						<div style="margin-top:60px; clear:both;"><p style="font-size:20px;">X results for "Europe"</p></div>
+						<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Chapter 4 results</p></div>
+					<div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;"><p>European traders first settled in the ...</p><p style="float:right; font-size: 12px;">in <strong>European immigrants</strong></p></div>
+					<div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;"><p>... valiant tulip was repatriated to Canada from Europe.</p><p style="float:right; font-size: 12px;">in <strong>European immigrants</strong></p></div>
+					<div style="margin-top:10px;"><a href="canada-history.html" class="btn" style="background-color:#ececec">Back to table of contents</a></div>
 				</div>
 			</section>
 
@@ -443,6 +404,8 @@ Citizenship test study guide - Canada’s History</h1>-->
 <div class="mwsbodytext text parbase section">
 
 </div>
+
+
 
 
 </div>
@@ -504,7 +467,7 @@ Citizenship test study guide - Canada’s History</h1>-->
 
 
 
-         <p class="search-para" id="para-3">The Vikings from Iceland who colonized Greenland 1,000 years ago also reached Labrador and the island of Newfoundland. The remains of their settlement, l’Anse aux Meadows, are a World Heritage site.</p>
+         <p class="search-para" id="para-3">>The Vikings from Iceland who colonized Greenland 1,000 years ago also reached Labrador and the island of Newfoundland. The remains of their settlement, l’Anse aux Meadows, are a World Heritage site.</p>
  <p class="search-para" id="para-4">European exploration began in earnest in 1497 with the expedition of John Cabot, who was the first to draw a map of Canada’s East Coast.</p>
 
 
@@ -2216,9 +2179,9 @@ the birth of the country that we know today<br>
 	<nav role="navigation" class="mrgn-bttm-lg">
     <h3 class="wb-inv">Document navigation</h3>
     <ul class="pager">
-     <li class="next h2"><a href="" rel="next">Next: Modern Canada</a></li>
+     <li class="previous"><a href="" rel="prev">Previous<span class="wb-inv">: ...?</span></a></li>
+     <li class="next"><a href="" rel="next">Next<span class="wb-inv">: ...?</span></a></li>
     </ul>
-		<p><a href="#left-panel" aria-controls="left-panel" class="btn btn-default overlay-lnk visible-xs visible-sm" role="button">Table of contents and search</a></p>
    </nav>
 
 
@@ -2260,54 +2223,21 @@ the birth of the country that we know today<br>
 		<header class="modal-header visible-xs visible-sm">
 			<h2 class="modal-title" style="color:black; font-size:20px!important;">Citizenship test study guide</h2>
 		</header>
-		<div class="modal-body" >
+		<div class="modal-body">
 			<p style="font-size:20px; margin-top:22px;">Search within the document</p>
 			<!--document search box-->
 			<form>
 				<div class="input-group" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
 					<input type="text" size="25" maxlength="25" id="fwtext" onchange="resettext();" style="border: none;box-shadow: none;float: left; width: 100%;" autocomplete="off">
-					<button type="button" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;"><a href="canada-history-search.html">Find</a></button>
+					<button type="button" onclick="findit();" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;">Find</button>
 				</div>
 			</form>
-<!--onclick="findit();"-->
-			<p style="clear:both; padding-top:30px; font-size:20px;">Chapters</p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Notice</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Oath of Citizenship</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Message</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Applying for Citizenship</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Rights and Responsibilities of Citizenship</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Who We Are</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none; border-left: 3px purple solid; padding-left: 5px;">Canada's History</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Aboriginal Peoples</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The First Europeans</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Exploring a River, Naming Canada</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Royal New France</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Struggle for a Continent</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The Province of Quebec</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">A Tradition of Accommodation</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">United Empire Loyalists</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Abolition of Slavery</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">A Growing Economy</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Rebellions of 1837–38</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Responsible Government</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Confederation</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Challenge in the West</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Moving Westward</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The First World War</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Women Get the Vote</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">Between the Wars</a></p>
-			<p style="padding-left: 5px; margin-left: 10px;"><a href="#" style="font-size: 16px; text-decoration:none;">The Second World War</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Modern Canada</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">How Canadians Govern Themselves</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Federal Elections</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">The Justice System</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Canadian Symbols</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Canada's Economy</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Canada's Regions</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Study Questions</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">For More Information and acknowledgements</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Authorities</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none;">Memorable Quotes</a></p>
+
+			<div style="margin-top:60px; clear:both;"><p style="font-size:20px;">X results for "Europe"</p></div>
+			<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Chapter 4 results</p></div>
+		<div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;"><p>European traders first settled in the ...</p><p style="float:right; font-size: 12px;">in <strong>European immigrants</strong></p></div>
+		<div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;"><p>... valiant tulip was repatriated to Canada from Europe.</p><p style="float:right; font-size: 12px;">in <strong>European immigrants</strong></p></div>
+		<div style="margin-top:10px;"><a href="canada-history.html" class="btn" style="background-color:#ececec">Back to table of contents</a></div>
 
 		</div>
 
@@ -2471,7 +2401,6 @@ the birth of the country that we know today<br>
 
 
 
-
                                     <li><a href="/en/transparency/terms.html">Terms and conditions</a></li>
 
 
@@ -2489,7 +2418,7 @@ the birth of the country that we know today<br>
                         <a href="#wb-cont">Top of page <span class="glyphicon glyphicon-chevron-up"></span></a>
                     </div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="/etc/designs/canada/wet-boew/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ body {
 		/* border: 10px solid orange; */
 }
 
-/*
+
 h1 {
 	font-size: 36px !important;
 	font-weight: 700 !important;
@@ -127,7 +127,7 @@ border-bottom: 2px solid RGB(255, 255, 255); }
 
 
 /* On this page, reducing size as an h2*/
-/*
+
 .smh3 {
 	font-size: 26px !important;
 	margin-bottom: 0px !important;
@@ -146,7 +146,7 @@ ul.menu li {
 
 p, ul, li, body {
 	font-size: 20px !important;
-	font-family: 'Lora', serif !important;
+	font-family: 'Noto sans', serif !important;
 	line-height: 34px !important;
 }
 
@@ -160,17 +160,17 @@ strong {
 td {
 
 	font-size: 14px !important;
-	font-family: 'Noto serif', sans-serif !important;
+	font-family: 'Noto sans', sans-serif !important;
 
 }
 
 caption, th {
 
 	font-size: 17px !important;
-	font-family: 'Noto serif', sans-serif; !important;
+	font-family: 'Noto sans', sans-serif; !important;
 
 }
-*/
+
 
 /* controls bullet spacing */
 
