@@ -1,0 +1,145 @@
+{
+    "response": {
+        "numFound": 5,
+        "start": 0,
+        "maxScore": 2.6645281,
+        "docs": [
+            {
+                "_lw_data_source_s": "discover_canada",
+                "mimeType_s": "text/html",
+                "_lw_data_source_collection_s": "paragraphs-demo",
+                "_lw_batch_id_s": "6d89714acc5d40f099a2304a8678dfbf",
+                "para_id_s": "para-7",
+                "body_txt_en": "The French and Aboriginal people collaborated in the vast fur-trade economy, driven by the demand for beaver pelts in Europe. Outstanding leaders like Jean Talon, Bishop Laval, and Count Frontenac built a French Empire in North America that reached from Hudson Bay to the Gulf of Mexico.",
+                "_lw_data_source_pipeline_s": "paragraphs-demo-default",
+                "charSet_s": "UTF-8",
+                "legalname_s": "ircc_paragraph_navigator",
+                "title_s": "The French and Aboriginal peop",
+                "title_t": [
+                    "The French and Aboriginal peop"
+                ],
+                "_lw_data_source_type_s": "lucid.web/web",
+                "id": "https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/study-guide/canada-history.html#para-7",
+                "fetchedDate_dt": "2018-08-15T00:50:53Z",
+                "lastModified_dt": "2018-08-13T15:01:48Z",
+                "length_l": 103337,
+                "_version_": 1608824372063109120,
+                "score": 2.6645281
+            },
+            {
+                "_lw_data_source_s": "discover_canada",
+                "mimeType_s": "text/html",
+                "_lw_data_source_collection_s": "paragraphs-demo",
+                "_lw_batch_id_s": "6d89714acc5d40f099a2304a8678dfbf",
+                "para_id_s": "para-77",
+                "body_txt_en": "The Royal Canadian Air Force (RCAF) took part in the Battle of Britain and provided a high proportion of Commonwealth aircrew in bombers and fighter planes over Europe. Moreover, Canada contributed more to the Allied air effort than any other Commonwealth country, with over 130,000 Allied air crew trained in Canada under the British Commonwealth Air Training Plan.",
+                "_lw_data_source_pipeline_s": "paragraphs-demo-default",
+                "charSet_s": "UTF-8",
+                "legalname_s": "ircc_paragraph_navigator",
+                "title_s": "The Royal Canadian Air Force (",
+                "title_t": [
+                    "The Royal Canadian Air Force ("
+                ],
+                "_lw_data_source_type_s": "lucid.web/web",
+                "id": "https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/study-guide/canada-history.html#para-77",
+                "fetchedDate_dt": "2018-08-15T00:50:53Z",
+                "lastModified_dt": "2018-08-13T15:01:48Z",
+                "length_l": 103337,
+                "_version_": 1608824372277018624,
+                "score": 2.2628868
+            },
+            {
+                "_lw_data_source_s": "discover_canada",
+                "mimeType_s": "text/html",
+                "_lw_data_source_collection_s": "paragraphs-demo",
+                "_lw_batch_id_s": "6d89714acc5d40f099a2304a8678dfbf",
+                "para_id_s": "para-73",
+                "body_txt_en": "In order to defeat Nazism and Fascism, the Allies invaded Nazi-occupied Europe. Canadians took part in the liberation of Italy in 1943–44. In the epic invasion of Normandy in northern France on June 6, 1944, known as D-Day, 15,000 Canadian troops stormed and captured Juno Beach from the German Army, a great national achievement shown in this painting by Orville Fisher. Approximately one in ten Allied soldiers on D-Day was Canadian. The Canadian Army liberated the Netherlands in 1944–45 and helped force the German surrender of May 8, 1945, bringing to an end six years of war in Europe.",
+                "_lw_data_source_pipeline_s": "paragraphs-demo-default",
+                "charSet_s": "UTF-8",
+                "legalname_s": "ircc_paragraph_navigator",
+                "title_s": "In order to defeat Nazism and ",
+                "title_t": [
+                    "In order to defeat Nazism and "
+                ],
+                "_lw_data_source_type_s": "lucid.web/web",
+                "id": "https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/study-guide/canada-history.html#para-73",
+                "fetchedDate_dt": "2018-08-15T00:50:53Z",
+                "lastModified_dt": "2018-08-13T15:01:48Z",
+                "length_l": 103337,
+                "_version_": 1608824261048270848,
+                "score": 1.8155075
+            },
+            {
+                "_lw_data_source_s": "discover_canada",
+                "mimeType_s": "text/html",
+                "_lw_data_source_collection_s": "paragraphs-demo",
+                "_lw_batch_id_s": "6d89714acc5d40f099a2304a8678dfbf",
+                "para_id_s": "para-74",
+                "body_txt_en": "The Second World War began in 1939 when Adolf Hitler, the National Socialist (Nazi) dictator of Germany, invaded Poland and conquered much of Europe. Canada joined with its democratic allies in the fight to defeat tyranny by force of arms.",
+                "_lw_data_source_pipeline_s": "paragraphs-demo-default",
+                "charSet_s": "UTF-8",
+                "legalname_s": "ircc_paragraph_navigator",
+                "title_s": "The Second World War began in ",
+                "title_t": [
+                    "The Second World War began in "
+                ],
+                "_lw_data_source_type_s": "lucid.web/web",
+                "id": "https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/study-guide/canada-history.html#para-74",
+                "fetchedDate_dt": "2018-08-15T00:50:53Z",
+                "lastModified_dt": "2018-08-13T15:01:48Z",
+                "length_l": 103337,
+                "_version_": 1608824261052465152,
+                "score": 1.79117
+            },
+            {
+                "_lw_data_source_s": "discover_canada",
+                "mimeType_s": "text/html",
+                "_lw_data_source_collection_s": "paragraphs-demo",
+                "_lw_batch_id_s": "6d89714acc5d40f099a2304a8678dfbf",
+                "para_id_s": "para-16",
+                "body_txt_en": ">After the defeat of Napoleon Bonaparte’s fleet in the Battle of Trafalgar (1805), the Royal Navy ruled the waves. The British Empire, which included Canada, fought to resist Bonaparte’s bid to dominate Europe. This led to American resentment at British interference with their shipping. Believing it would be easy to conquer Canada, the United States launched an invasion in June 1812. The Americans were mistaken. Canadian volunteers and First Nations, including Shawnee led by Chief Tecumseh, supported British soldiers in Canada’s defence. In July, Major-General Sir Isaac Brock captured Detroit but was killed while defending against an American attack at Queenston Heights, near Niagara Falls, a battle the Americans lost. In 1813, Lieutenant-Colonel Charles de Salaberry and 460 soldiers, mostly French Canadiens, turned back 4,000 American invaders at Châteauguay, south of Montreal. In 1813 the Americans burned Government House and the Parliament Buildings in York (now Toronto). In retaliation in 1814, Major-General Robert Ross led an expedition from Nova Scotia that burned down the White House and other public buildings in Washington, D.C. Ross died in battle soon afterwards and was buried in Halifax with full military honours.",
+                "_lw_data_source_pipeline_s": "paragraphs-demo-default",
+                "charSet_s": "UTF-8",
+                "legalname_s": "ircc_paragraph_navigator",
+                "title_s": ">After the defeat of Napoleon ",
+                "title_t": [
+                    ">After the defeat of Napoleon "
+                ],
+                "_lw_data_source_type_s": "lucid.web/web",
+                "id": "https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/study-guide/canada-history.html#para-16",
+                "fetchedDate_dt": "2018-08-15T00:50:53Z",
+                "lastModified_dt": "2018-08-13T15:01:48Z",
+                "length_l": 103337,
+                "_version_": 1608824260876304384,
+                "score": 1.1704756
+            }
+        ]
+    },
+    "responseHeader": {
+        "zkConnected": true,
+        "status": 0,
+        "QTime": 7,
+        "params": {
+            "q": "europe",
+            "defType": "edismax",
+            "lw.pipelineId": "paragraphs-demo-default",
+            "fl": [
+                "*",
+                "score"
+            ],
+            "start": "0",
+            "isFusionQuery": "true",
+            "rows": "10",
+            "wt": "json",
+            "facet": "true"
+        }
+    },
+    "facet_counts": {
+        "facet_queries": {},
+        "facet_fields": {},
+        "facet_ranges": {},
+        "facet_intervals": {},
+        "facet_heatmaps": {}
+    }
+}
