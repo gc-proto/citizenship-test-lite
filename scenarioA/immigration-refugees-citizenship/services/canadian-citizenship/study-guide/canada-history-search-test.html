@@ -250,27 +250,64 @@ document.addEventListener("DOMContentLoaded", function(){
  /*var jsonfromsearch = getSearchresults(q);
  console.log(q);*/
 
-    $.getJSON('example-results.json', function(data) {
-				console.log(data);
-        /*$.each(data.docs, function(i, f) {
+    $.getJSON('https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/study-guide/example-results.json', function(data) {
+				if (data.response.numFound > 0) { // check if there are search results
 
-					var sSnippet = '<p>' + f.body_txt_en + '</p>';
+					$("#resultsNumber").append(data.response.numFound + ' results for "' + data.responseHeader.params.q + '"');
+					var header = "blankchapterheading"; //random term so that we can evaluate new section
+					$("#searchResults").append('<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Results for <strong>Canada\'s History</strong></p></div>');
+	        $.each(data.response.docs, function(i, f) {
+						/*if (f.title_s != header) {
+							var header = f.title_s;
+							$("#searchResults").append('<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Results for <strong>' + header + '</strong></p></div>');
+						}*/
+						//get 45 characters before and after search term in returned paragraph, or beginning/end of snippet if it doesn't go that far.
+						if (f.body_txt_en.toLowerCase().indexOf(data.responseHeader.params.q.toLowerCase()) < 45) {
+							var iStart = 0;
+						} else {
+							var iStart = f.body_txt_en.toLowerCase().indexOf(data.responseHeader.params.q.toLowerCase()) - 45;
+						}
+						if ((f.body_txt_en.toLowerCase().indexOf(data.responseHeader.params.q.toLowerCase()) + data.responseHeader.params.q.length + 45) > f.body_txt_en.length) {
+							var iEnd = f.body_txt_en.length;
+						} else {
+							var iEnd = f.body_txt_en.toLowerCase().indexOf(data.responseHeader.params.q.toLowerCase()) + data.responseHeader.params.q.length + 45;
+						}
+						var sSnippet = f.body_txt_en.substring(iStart, iEnd);
 
+						// if iStart = 0 or iEnd = f.body_text_en.length, then ellipsis
+						if (iStart != 0) {
+							var sSnippet = '...' + sSnippet.substring(sSnippet.indexOf(" "),sSnippet.Length); //to nearest space
+						}
+						if (iEnd != f.body_txt_en.length) {
+							var sSnippet = sSnippet.substring(0, sSnippet.lastIndexOf(" ")) + '...'; //to nearest space
+						}
+						var anchorid = f.id.substring(f.id.indexOf("#para-"),f.id.length);
+						var linkAddress = window.location.href + anchorid;
+						console.log(linkAddress);
 
-					$("#resultsNumber").append(sSnippet);
+						//WILL HAVE TO ADJUST TO BE CHAPTER PAGE - do we make the ToC and Search the same page? how?
 
+						//current URL + id from f.id
+						$("#searchResults").append('<a style="text-decoration: none; font-size:15px!important;" href="' + linkAddress + '"><div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;">' + sSnippet + '</div></a>');
+					});
 
-           var tblRow = "<tr>" + "<td>" + f.body_txt_en + "</td>" +
-            "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-            $(tblRow).appendTo("#userdata tbody");*/
-      //});
+				} else { // no search results message
+					$("#searchResults").append('<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Results for <strong>' + 'There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p></div>');
+				}
+
+				//No pagination??
+
 
     });
 /*
  	Pre1. Send URL parameters with search form
+		Remember to send this URL param: txthl=<text_1>+<text_2>+<text_3>
+
  	Pre2. Get URL parameters on page load
+
  	Pre3. Send GET request for the results json
- 	1. For each result, display
+
+	1. For each result, display
 */
 
 
@@ -396,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-      <div class="mwsaccordion-html section clearfix col-md-push-4 col-md-8">
+      <div class="mwsaccordion-html section clearfix col-md-push-4 col-md-8 wb-txthl">
 
 
 
@@ -2266,10 +2303,8 @@ the birth of the country that we know today<br>
 				</div>
 			</form>
 
-			<div style="margin-top:60px; clear:both;"><p id="resultsNumber" style="font-size:20px;">X results for "Europe"</p></div>
-			<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Chapter 4 results</p></div>
-		<div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;"><p>European traders first settled in the ...</p><p style="float:right; font-size: 12px;">in <strong>European immigrants</strong></p></div>
-		<div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;"><p>... valiant tulip was repatriated to Canada from Europe.</p><p style="float:right; font-size: 12px;">in <strong>European immigrants</strong></p></div>
+			<div style="margin-top:60px; clear:both;"><p id="resultsNumber" style="font-size:20px;"></p></div>
+			<div id="searchResults"></div>
 		<div style="margin-top:10px;"><a href="canada-history.html" class="btn" style="background-color:#ececec">Back to table of contents</a></div>
 
 		</div>
