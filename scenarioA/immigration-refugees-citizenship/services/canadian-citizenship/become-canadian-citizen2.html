@@ -225,9 +225,10 @@ Become a Canadian citizen</h1>
 var YourParam="sunshine";
 
 $(document).ready(function() {
-  $("#goto").change(function(){
-    if ($(this).val()!='') {
-      window.location.href=$(this).val()+"?param="+YourParam;
+  $("#btnGoToCountry").click(function(){
+    if ($("#goto").val()!='') {
+      window.location.href=$("#goto").val();
+      //window.location.href=$("#goto").val()+"?param="+YourParam;
     }
   });
 });
@@ -241,12 +242,16 @@ $(document).ready(function() {
 
 <form action="whatever.shtml" method="post" enctype="multipart/form-data">
   <select id="goto">
-    <option value="">Go somewhere...</option>
+    <option value="">You are </option>
     <option value="http://cnn.com/">CNN</option>
     <option value="http://disney.com/">Disney</option>
     <option value="http://stackoverflow.com/">stackoverflow</option>
     <option value="http://ironmaiden.com/">Iron Maiden</option>
   </select>
+<span class="input-group-btn">
+        <button class="btn btn-default" id="btnGoToCountry" type="button">Go!</button>
+    </span>
+
 </form>
 
 
