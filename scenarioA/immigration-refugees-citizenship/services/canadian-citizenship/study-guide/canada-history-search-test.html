@@ -286,9 +286,14 @@ document.addEventListener("DOMContentLoaded", function(){
 						console.log(linkAddress);
 
 						//WILL HAVE TO ADJUST TO BE CHAPTER PAGE - do we make the ToC and Search the same page? how?
+						//bold or highlight search term in result panels
+
+						//only results scroll, not the search bar or 'back to TOC'
+
+						//exact string match or ANDing?
 
 						//current URL + id from f.id
-						$("#searchResults").append('<a style="text-decoration: none; font-size:15px!important;" href="' + linkAddress + '"><div style="margin-top: 10px; padding: 5px 5px 30px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;">' + sSnippet + '</div></a>');
+						$("#searchResults").append('<a style="text-decoration: none; font-size:15px!important;" href="' + linkAddress + '"><div style="margin-top: 10px; padding: 5px 5px 0px 5px; border: 1px #ccc8c8 solid; box-shadow: 4px 6px #f5f5f5;">' + sSnippet + '</div></a>');
 					});
 
 				} else { // no search results message
