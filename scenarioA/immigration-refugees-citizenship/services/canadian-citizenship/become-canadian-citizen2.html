@@ -221,9 +221,17 @@ Become a Canadian citizen</h1>
 
 <h2>Steps to become a Canadian citizen</h2>
 
+<script>
+var YourParam="sunshine";
 
-
-
+$(document).ready(function() {
+  $("#goto").change(function(){
+    if ($(this).val()!='') {
+      window.location.href=$(this).val()+"?param="+YourParam;
+    }
+  });
+});
+</script>
 <section class="gc-drmt">
 	<h3 class="h5">
 		<a href="./become-canadian-citizen/determine.html" class="ch5">Apply for citizenship</a>
@@ -231,6 +239,18 @@ Become a Canadian citizen</h1>
 
 		<p>Who can apply, forms, fees and processing times</p>
 
+<form action="whatever.shtml" method="post" enctype="multipart/form-data">
+  <select id="goto">
+    <option value="">Go somewhere...</option>
+    <option value="http://cnn.com/">CNN</option>
+    <option value="http://disney.com/">Disney</option>
+    <option value="http://stackoverflow.com/">stackoverflow</option>
+    <option value="http://ironmaiden.com/">Iron Maiden</option>
+  </select>
+</form>
+
+
+	
 </section>
 			
 			<section class="gc-drmt">
