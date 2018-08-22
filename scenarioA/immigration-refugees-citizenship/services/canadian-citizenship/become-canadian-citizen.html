@@ -198,7 +198,7 @@ Become a Canadian citizen</h1>
 
         <ul>
 
-     
+
                    <li>
                     <a href="/en/immigration-refugees-citizenship/services/application/check-status.html" title="Check your application status">Check your application status</a>
                 </li>
@@ -206,7 +206,7 @@ Become a Canadian citizen</h1>
                     <a href="./study-guide/discover-canada.html" title="Get the official study guide for the citizenship test">Get the official study guide for the citizenship test</a>
                 </li>
 		<li>
-                    <a href="./practice-test/test.html" title="Take a practice citizenhip test">Take a practice citizenhip test</a>
+                    <a href="./practice-test/test.html" title="Take a practice citizenship test">Take a practice citizenship test</a>
                 </li>
         </ul>
 
@@ -221,22 +221,37 @@ Become a Canadian citizen</h1>
 
 <h2>Steps to become a Canadian citizen</h2>
 
-
-
-
 <section class="gc-drmt">
 	<h3 class="h5">
-		<a href="./become-canadian-citizen/about.html" class="ch5">Apply for citizenship</a>
+		<a href="./become-canadian-citizen/determine.html" class="ch5">Apply for citizenship</a>
 	</h3>
 
 		<p>Who can apply, forms, fees and processing times</p>
 
-</section>
+<form action="whatever.shtml" method="post" enctype="multipart/form-data">
+<div class="input-group" style="width: 350px;">
 
+  <select id="goto" class="form-control">
+    <option value="placeholder">You want to apply for:</option>
+    <option value="./become-canadian-citizen/apply/adults/about.html">An adult</option>
+    <option value="./become-canadian-citizen/apply/adults/about.html">A minor</option>
+    <option value="./become-canadian-citizen/apply/adults/about.html">A member of the Canadian Armed Forces</option>
+  </select>
+    <span class="input-group-btn">
+        <button class="btn btn-default" id="btnGoToCountry" type="button">Go!</button>
+    </span>
+</div>
+
+
+</form>
+
+
+
+</section>
 
 			<section class="gc-drmt">
 	<h3 class="h5">
-		<a href="./become-canadian-citizen/citizenship-test.html" class="ch5">Take the citizenship test and go to the interview </a>
+		<a href="./become-canadian-citizen/citizensip-test/who.html" class="ch5">Take the citizenship test and go to the interview </a>
 	</h3>
 
 		<p>Who has to take the test, what’s on the test, how to study, what happens on test day</p>
@@ -247,7 +262,7 @@ Become a Canadian citizen</h1>
 
 <section class="gc-drmt">
 	<h3 class="h5">
-		<a href="./become-canadian-citizen/citizenship-ceremony.html" class="ch5">Take the oath of citizenship at the citizenship ceremony</a>
+		<a href="./become-canadian-citizen/ceremony/ceremony.html" class="ch5">Take the oath of citizenship at the citizenship ceremony</a>
 	</h3>
 
 		<p>What is the Oath and the citizenship ceremony, who must attend, what to bringn</p>
@@ -431,5 +446,25 @@ Become a Canadian citizen</h1>
 
 <![endif]-->
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
+
+
+<script>
+
+	var YourParam="sunshine";
+
+	$(document).ready(function() {
+
+	$("#btnGoToCountry").click(function(){
+
+	if ($("select#goto").val()!='placeholder') {
+	      window.location.href=$("#goto").val();
+	    }
+	  });
+
+	});
+
+</script>
+
+
 </body>
 </html>
