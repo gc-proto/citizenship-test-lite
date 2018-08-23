@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function(){
 /* how to use the parsed parameters in a function*/
 function getSearchresults(q) {
    var base = 'https://ca-gov-staging.c.lucidworks.cloud/api/query/goc-paragraphs-demo';
-   var uri = base + '?q=' + q;
+   var uri = base + '?q=' + '"' + q + '"';
 	 console.log(uri);
 
 	 /*basic ajax request to the search api*/
