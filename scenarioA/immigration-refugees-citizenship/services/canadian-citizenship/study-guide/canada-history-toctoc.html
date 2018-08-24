@@ -335,6 +335,7 @@
 				<div class="modal-body">
 					<p><a href="#" style="font-size: 16px;"><!--Découvrir le Canada: en -->Français</a></p>
 					<!-- add content from -->
+					<div id='toctoc'></div>
 
 
 
@@ -2219,7 +2220,7 @@ the birth of the country that we know today<br>
 		<header class="modal-header visible-xs visible-sm">
 			<h2 class="modal-title" style="color:black; font-size:20px!important;">Citizenship test study guide</h2>
 		</header>
-		<div class="modal-body" id="search-and-toc">
+		<div class="modal-body" >
 			<p style="font-size:20px; margin-top:22px;">Search within the document</p>
 			<!--document search box-->
 			<form>
@@ -2228,45 +2229,8 @@ the birth of the country that we know today<br>
 					<button type="button" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;"><a href="canada-history-search.html">Find</a></button>
 				</div>
 			</form>
-			<!--onclick="findit();"-->
-			<p style="clear:both; padding-top:30px; font-size:20px;">Chapters</p>
-			<p><a class="longdoc-toc-link" href="#">Notice</a></p>
-			<p><a href="#" class="longdoc-toc-link">Oath of Citizenship</a></p>
-			<p><a href="#" class="longdoc-toc-link">Message</a></p>
-			<p><a href="#" class="longdoc-toc-link">Applying for Citizenship</a></p>
-			<p><a href="#" class="longdoc-toc-link">Rights and Responsibilities of Citizenship</a></p>
-			<p><a href="#" class="longdoc-toc-link">Who We Are</a></p>
-			<p><a href="#" style="font-size: 16px; text-decoration:none; border-left: 3px purple solid; padding-left: 5px;">Canada's History</a></p>
-			<p class="longdoc-toc-sub-p"><a class="longdoc-toc-sub-link" href="#">Aboriginal Peoples</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">The First Europeans</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Exploring a River, Naming Canada</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Royal New France</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Struggle for a Continent</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">The Province of Quebec</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">A Tradition of Accommodation</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">United Empire Loyalists</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Abolition of Slavery</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">A Growing Economy</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Rebellions of 1837–38</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Responsible Government</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Confederation</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Challenge in the West</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Moving Westward</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">The First World War</a></p>
-			<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Women Get the Vote</a></p>
-				<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">Between the Wars</a></p>
-				<p class="longdoc-toc-sub-p"><a href="#" class="longdoc-toc-sub-link">The Second World War</a></p>
-				<p><a href="#" class="longdoc-toc-link">Modern Canada</a></p>
-				<p><a href="#" class="longdoc-toc-link">How Canadians Govern Themselves</a></p>
-				<p><a href="#" class="longdoc-toc-link">Federal Elections</a></p>
-				<p><a href="#" class="longdoc-toc-link">The Justice System</a></p>
-				<p><a href="#" class="longdoc-toc-link">Canadian Symbols</a></p>
-				<p><a href="#" class="longdoc-toc-link">Canada's Economy</a></p>
-				<p><a href="#" class="longdoc-toc-link">Canada's Regions</a></p>
-				<p><a href="#" class="longdoc-toc-link">Study Questions</a></p>
-				<p><a href="#" class="longdoc-toc-link">For More Information and acknowledgements</a></p>
-				<p><a href="#" class="longdoc-toc-link">Authorities</a></p>
-				<p><a href="#" class="longdoc-toc-link">Memorable Quotes</a></p>
+<!--onclick="findit();"-->
+			<div id='toctoc2'></div>
 
 		</div>
 
@@ -2505,18 +2469,14 @@ the birth of the country that we know today<br>
 				$stickyEl.toggleClass('overfooter', $footerDiv.offset().top < scrollPosition);
 		});
 
-		$(document).ready(function() {
-			$("#left-panel").click(function(){
-				console.log("did it work?");
-				)
-			});
-		});
-
-		/* function that works on opening the left hand overlay to copy in bottom of page aside content, change h2, etc*/
-
-
-
 </script>
+<script src="find_custom2.js"></script>
+<script>
+	$(function(){
+	  $("#toctoc").load("toctoc.html");
+		$("#toctoc2").load("toctoc.html");
+	});
+  </script>
 
 </body>
 </html>
