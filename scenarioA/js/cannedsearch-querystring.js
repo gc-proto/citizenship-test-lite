@@ -1,7 +1,7 @@
 
 
 	/*
-	This script will use watch for a query string variable called "scenario" and put the value in localStorage
+	This script will use watch for a query string variable called "scenario" and put the value in sessionStorage
 
 	Use the scenario links at the top of the prototype to set this variable at the beginning of each scenario test
 		like this:  https://gc-proto.github.io/citizenship-test-lite/scenarioA/en.html?scenario=2
@@ -12,7 +12,7 @@
 		If this script doesn't work, or if no value is specified, the search form will default to:
 			https://gc-proto.github.io/citizenship-test-lite/scenarioA/search-results.html
 
-	When the scenario variable is spotted in the query string, its value will be stored in localStorage and replace whatever old value might already be in there.  This value will persist until the browser window is closed.
+	When the scenario variable is spotted in the query string, its value will be stored in sessionStorage and replace whatever old value might already be in there.  This value will persist until the browser window is closed.
 
 	Alternatively, this value can also be set manually, on any page in the prototype, by adding ?scenario=X to the end of the URL in the address bar.  (Where X is the value of the scenario variable)
 
@@ -22,8 +22,7 @@
 
 	$(document).ready(function() {
 
-
-		// function to determine if localStorage is available in the browser
+		// function to determine if sessionStorage is available in the browser
 		function storageAvailable(type) {
 		    try {
 		        var storage = window[type],
@@ -64,16 +63,16 @@
 		}
 
 
-		// First, confirm that localStorage is available, and alert the moderator if not */
-		if (storageAvailable('localStorage')) {
-			// localStorage is available - ready to proceed */
+		// First, confirm that sessionStorage is available, and alert the moderator if not */
+		if (storageAvailable('sessionStorage')) {
+			// sessionStorage is available - ready to proceed */
 
 			// establish variable with the value of our "scenario" query string
 			var scenario = getQuerystringVars()["scenario"];
 
 			// if there's a new querystring variable, then use that
 			if (scenario) {
-				// use the new querystring variable
+				// yes, so we're using it
 
 				// alert("fresh scenario: " + scenario);
 
@@ -88,36 +87,48 @@
 
 				});
 
-				// and then store that value in localStorage for us on subsequent pages
-				localStorage['scenario'] = scenario;
+				// and then store that value in sessionStorage for us on subsequent pages
+				sessionStorage['scenario'] = scenario;
 
 			} else {
-				// otherwise, use what's in the localStorage
+				// no, so we'll use what's in the sessionStorage
 
-				var scenario = localStorage.getItem('scenario');
+				var scenario = sessionStorage.getItem('scenario');
 
-				// alert("stored scenario: " + scenario);
+				//alert("stored scenario: " + scenario);
 
-				//instruct the form to submit to a different search page, which matches the value of the variable
-				$("section#wb-srch form").submit(function( event ) {
-
-					// alert("scenario: " + scenario);
-
-					window.location.href = "https://gc-proto.github.io/citizenship-test-lite/scenarioA/search-results-" + scenario + ".html";
-
-					// tell the form not to do whatever the HTML code was telling it to do
-					event.preventDefault();
-
-				});
+				// check to see if there is in fact something in sessionStorage
+				if (scenario != null) {
+					
+					// if there is, then we instruct the form to submit to a different search page, which matches the value of the variable
+					$("section#wb-srch form").submit(function( event ) {
+	
+						// alert("scenario: " + scenario);
+	
+						window.location.href = "https://gc-proto.github.io/citizenship-test-lite/scenarioA/search-results-" + scenario + ".html";
+	
+						// tell the form not to do whatever the HTML code was telling it to do
+						event.preventDefault();
+	
+					});
+					
+				}
 
 			}
 
 		}
 		else {
-			// localStorage is NOT available - throw up an alert */
-
-			// leaving out the alert, to allow testing to continue even if the search solution won't work
-			// alert("localStorage is not available!  This will prevent the canned search results pages from functioning.");
+			// sessionStorage is NOT available - throw up an alert */
+	
+			// find out the filename of the page we're on
+			var currentpage = document.location.pathname.match(/[^\/]+$/)[0];
+			
+			// if we're on template_links.html, warn the moderator that the canned search script won't work
+			if (currentpage = "template_links.html") {
+				
+				alert("sessionStorage is not available!  This will prevent the canned search results pages from functioning.");
+				
+			}
 
 		}
 
