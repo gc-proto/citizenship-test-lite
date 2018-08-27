@@ -24,7 +24,24 @@
 
 /* TOC links panel - desktop */
 
+	@media screen and (min-width 1200px) {
+		#desktop-left-toc.sticky {
+			/*width: 350px;*/
+		}
+	}
 
+	#desktop-left-toc.sticky {
+		position: fixed;
+		top: 0px;
+		width: 345px;
+		bottom: 0px;
+		overflow-y: scroll;
+	}
+	#desktop-left-toc.overfooter {
+		position: absolute!important;
+		bottom: 0px!important;
+		top: auto!important;
+	}
 
 /* everything else */
 
