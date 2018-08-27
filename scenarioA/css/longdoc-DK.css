@@ -30,6 +30,14 @@
 		}
 	}
 
+	#desktop-left-toc {
+		position: sticky;
+		width: 345px;
+		height: auto;
+		overflow-y: scroll;
+	}
+
+	/* 
 	#desktop-left-toc.sticky {
 		position: fixed;
 		top: 0px;
@@ -42,6 +50,7 @@
 		bottom: 0px!important;
 		top: auto!important;
 	}
+	 */
 
 /* everything else */
 
