@@ -277,6 +277,27 @@ function getSearchresults(q) {
 						 /*process search results json here!!*/
 						 console.log("success");
 						 console.log(data);
+
+						 //filter data by para_id_s
+						 //each doc has an id number. So what I need to do is create an array
+						 var sort_by = function (field, reverse, primer){
+
+						    var key = primer ?
+						        function(x) {return primer(x[field])} :
+						        function(x) {return x[field]};
+
+						    reverse = !reverse ? 1 : -1;
+
+						    return function (a, b) {
+						        return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+						      }
+						 }
+						 data.response.docs.sort(
+						 sort_by('para_id_s', false, function(a) {
+							 //a - change to integer
+								return a.toUpperCase();
+							}));
+
 						 var queryTerm = data.responseHeader.params.q.substring(1, data.responseHeader.params.q.length - 1); //remove ""
 						 console.log(queryTerm);
 						 console.log(data.responseHeader.params.q);
@@ -291,11 +312,9 @@ function getSearchresults(q) {
 									console.log(header);
 									console.log(f.title_s);
 		 							header = f.title_s;
-		 							$("#searchResults").append('<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Results for <strong>' + header.substring(header.indexOf(" - ") + 3, header.indexOf(" - ", header.indexOf(" - ") + 3)) + '</strong></p></div>');
+		 							$("#searchResults").append('<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Results for <strong>' + header.substring(header.indexOf(" - ") + 3, header.lastIndexOf(" - ")) + '</strong></p></div>');
 		 						}
 		 						//get 45 characters before and after search term in returned paragraph, or beginning/end of snippet if it doesn't go that far.
-
-
 								console.log(f.body_txt_en.toLowerCase().indexOf(queryTerm));
 								if (f.body_txt_en.toLowerCase().indexOf(queryTerm.toLowerCase()) < 45) {
 		 							var iStart = 0;
@@ -321,19 +340,14 @@ function getSearchresults(q) {
 		 							var sSnippet = sSnippet.substring(0, sSnippet.lastIndexOf(" ")) + '...'; //to nearest space
 		 						}
 
-								console.log(q);
-								var anchorid = f.id.substring(f.id.indexOf("#para-"),f.id.length);
+								//Add "txthl=?" to the string, so that we still get the results
+								//they have a f.para_id_s variable I can now use, which is the id
 								var linkbase = f.id.substring(0, f.id.indexOf("#para-"));
-								console.log(linkbase);
-								var linkAddress = linkbase + "?txthl=" + q + anchorid;
-								console.log(linkAddress);
+								var linkAddress = linkbase + "?txthl=" + q + "#" + f.para_id_s;
 								//for local file dev
-								if (window.location.href.substring(0, 3) != "http") {
+								/*if (window.location.href.substring(0, 3) != "http") {
 			 						var linkAddress = window.location.href + anchorid;
-			 						console.log(linkAddress);
-								}
-
-
+								}*/
 
 		 						$("#searchResults").append('<a class="search-result-link" href="' + linkAddress + '"><div class="search-result-div">' + sSnippet + '</div></a>');
 		 					});
@@ -386,7 +400,7 @@ function backtoToc () {
 		$("#back-to-toc").addClass("hidden");
 		//remove highlighting
 		//Not sure how????
-}
+};
 </script>
 
 
@@ -821,7 +835,7 @@ function backtoToc () {
 	<nav role="navigation" class="mrgn-bttm-lg">
     <h3 class="wb-inv">Document navigation</h3>
     <ul class="pager">
-     <li class="next h2"><a href="https://gc-proto.github.io/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen/citizenship-test/study-guide/canada-regions.html" rel="next">Next: Chapter 10 - Canada's Regions</a></li>
+     <li class="next h2"><a href="canada-regions.html" rel="next">Next: Chapter 10 - Canada's Regions</a></li>
     </ul>
    </nav>
 
