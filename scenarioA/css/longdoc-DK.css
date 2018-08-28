@@ -32,8 +32,7 @@ section#wb-auto-2 {
 	#desktop-left-toc {
 		position: fixed;
 		width: 345px;
-		height: calc(100% - 35px);
-		height: calc(100% - 280px);
+		height: calc(100% - 70px);
 		margin-bottom: 20px;
 		overflow-y: auto;
 		padding: 15px 15px 25px 25px;
@@ -73,6 +72,22 @@ section#wb-auto-2 {
 			line-height: 20px !important;
 			margin-bottom: 15px;
 		}
+
+	footer#wb-info {
+		margin-top: 50px;
+	}
+
+	footer#wb-info nav {
+		padding: 1em 0 1em 0;
+	}
+
+	footer#wb-info {
+		background-color: transparent !important;
+	}
+
+	footer#wb-info .brand {
+		background-color: transparent !important;
+	}
 
 	/*
 	#desktop-left-toc.sticky {
