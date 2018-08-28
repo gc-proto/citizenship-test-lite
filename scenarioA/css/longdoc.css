@@ -1,5 +1,12 @@
 .longdoc-toc-link {
-  font-size: 16px; text-decoration:none;
+  font-size: 16px; text-decoration: none;
+}
+
+.active {
+  border-left: solid 4px black;
+  padding-left: 4px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 .longdoc-toc-sub-p {
