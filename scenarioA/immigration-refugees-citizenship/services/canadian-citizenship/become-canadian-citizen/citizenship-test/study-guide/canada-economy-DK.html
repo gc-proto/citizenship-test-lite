@@ -96,49 +96,12 @@
 
 
 
+<ul id="wb-tphp" class="wb-init wb-disable-inited">
+<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+</ul>
 
 
 
-<div class="global-header">
-
-	<ul id="wb-tphp" class="wb-init wb-disable-inited">
-	<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-	</ul>
-
-	<header role="banner">
-
-		<div id="wb-bnr" class="container">
-
-			<section id="wb-lng" class="visible-md visible-lg text-right">
-
-				<h2 class="wb-inv">Language selection</h2>
-
-				<div class="row">
-				<div class="col-md-12">
-				<ul class="list-inline margin-bottom-none">
-				<li><a lang="fr" href="home-fr.html">Français</a></li>
-				</ul>
-				</div>
-				</div>
-
-			</section>
-
-			<div class="row">
-
-				<div class="brand col-xs-8 col-sm-9 col-md-6">
-				<a href="/en.html">
-				<object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg"></object>
-				<span class="wb-inv">Government of Canada</span>
-				</a>
-				</div>
-
-			</div><!--.row -->
-
-		</div><!-- #wb-bnr -->
-
-	</header>
-
-</div><!-- global-header -->
 
 
 
@@ -271,9 +234,44 @@
 
 
 	<!-- Main content with col-md-push-4 col-md-8 wb-txthl wb-init wb-txthl-inited  (until line 2263, before the mwsbodytext, which you leave) -->
-	<div class="col-md-push-4 col-md-8 wb-txthl wb-init wb-txthl-inited" style="border: 1px solid green;">
+	<div class="col-md-push-4 col-md-8 wb-txthl wb-init wb-txthl-inited">
 
 
+
+
+
+
+
+
+
+		<section id="wb-lng" class="visible-md visible-lg text-right">
+
+			<h2 class="wb-inv">Language selection</h2>
+
+			<div class="row">
+			<div class="col-md-12">
+			<ul class="list-inline margin-bottom-none">
+			<li><a lang="fr" href="home-fr.html">Français</a></li>
+			</ul>
+			</div>
+			</div>
+
+		</section>
+
+
+
+
+
+		<div class="row">
+
+			<div class="brand col-xs-8 col-sm-9 col-md-6">
+			<a href="/en.html">
+			<object type="image/svg+xml" tabindex="-1" data="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg"></object>
+			<span class="wb-inv">Government of Canada</span>
+			</a>
+			</div>
+
+		</div><!--.row -->
 
 
 
@@ -647,7 +645,7 @@
 
 	<div class="row pagedetails">
 
-		<details class="brdr-0 col-sm-6 col-lg-4 mrgn-tp-sm" id="footer-div">
+		<details class="brdr-0 col-sm-6 mrgn-tp-sm" id="footer-div">
 
 			<summary class="btn btn-default text-center">Report a problem or mistake on this page</summary>
 
@@ -731,7 +729,7 @@
 
 		</details>
 
-		<div class="col-sm-3 mrgn-tp-sm pull-right">
+		<div class="col-sm-5 mrgn-tp-sm pull-right">
 		<div class="wb-share" data-wb-share='{&#34;lnkClass&#34;: &#34;btn btn-default btn-block&#34;}'></div>
 		</div>
 
@@ -774,27 +772,40 @@
 
 
 
-	<aside class="col-md-4 col-md-pull-8 visible-lg visible-md" data-inview="top-bar" id="desktop-left-toc" role="complementary" style="border: 1px solid green;">
+		<aside class="visible-lg visible-md" data-inview="top-bar" id="desktop-left-toc" role="complementary">
 
 		<header class="modal-header visible-xs visible-sm">
 		<h2 class="modal-title" style="color:black; font-size:20px!important;">Citizenship test study guide</h2>
 		</header>
 
 		<div class="modal-body">
-		<p style="font-size:20px; margin-top:22px;">Search within the document</p>
 
+		<h4>Search this document</h4>
+
+		<!--
 		<form id="find-in-doc">
 		<div class="input-group" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
 		<input type="text" name="txthl" style="border: none;box-shadow: none;float: left; width: 100%;">
 		<button type="submit" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;">Find</button>
 		</div>
 		</form>
+		-->
 
-		<div style="margin-top:60px; clear:both;"><p id="resultsNumber" style="font-size:20px;"></p></div>
+		<form id="find-in-doc" class="form-inline">
+			<label for="btngrp-search2" class="wb-inv">Search</label>
+			<div class="input-group">
+				<input type="text" name="txthl" class="form-control" id="btngrp-search2" />
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-default" type="button">Find</button>
+				</span>
+			</div>
+		</form>
+
+		<div style="clear:both;"><p id="resultsNumber" style="font-size:20px;"></p></div>
 		<div id="searchResults"></div>
 
 		<div class="hidden" id="table-of-contents">
-		<p style="clear:both; padding-top:30px;">Chapters</p>
+		<h4>Chapters</h4>
 		<p><a href="notice.html" class="longdoc-toc-link">Notice</a></p>
 		<p><a href="understanding-the-oath.html" class="longdoc-toc-link">Oath of Citizenship</a></p>
 		<p><a href="message-readers.html" class="longdoc-toc-link">Message</a></p>
@@ -814,11 +825,11 @@
 		<p><a href="for-more-info.html" class="longdoc-toc-link">For More Information and acknowledgements</a></p>
 		<p><a href="authorities.html" class="longdoc-toc-link">Authorities</a></p>
 		<p><a href="memorable-quotes.html" class="longdoc-toc-link">Memorable Quotes</a></p>
+
+
 		</div>
 		<div id="back-to-toc" class="hidden" style="margin-top:10px;"><a onClick="backtoToc()" class="btn" style="background-color:#ececec;">Back to table of contents</a></div>
 
-
-		<button class="btn btn-default" type="submit">Show more results</button>
 
 		</div>
 
