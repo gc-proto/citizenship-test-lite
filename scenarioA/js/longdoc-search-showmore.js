@@ -9,19 +9,21 @@ Nice to haves:
 
 //document URL param parser
 document.addEventListener("DOMContentLoaded", function(){
- var q = getUrlParameter('txthl'); // (gets me URL parameters)
+ var q = getUrlParameter('txthl');
+ /*var start = getUrlParameter('start');*/
+ // (gets me URL parameters)
  /*var lang = getUrlParameter('lang'); // (gets me URL parameters)*/
 
  // get the URL aprameters for ID and Lang then return API JSON
 
- var jsonfromsearch = getSearchresults(q);
+ var jsonfromsearch = getSearchresults(q, start);
  console.log(q);
 
 });
 /* how to use the parsed parameters in a function*/
-function getSearchresults(q) {
+function getSearchresults(q, start) {
    var base = 'https://ca-gov-staging.c.lucidworks.cloud/api/query/goc-paragraphs-demo';
-   var uri = base + '?q=' + '"' + q + '"' + '&sort=page_num_i%20asc,para_num_i%20asc&rows=9999';
+   var uri = base + '?q=' + '"' + q + '"' + '&sort=page_num_i%20asc,para_num_i%20asc&rows=99999';
 	 console.log(uri);
 
 	 /*basic ajax request to the search api*/
@@ -118,6 +120,24 @@ function getSearchresults(q) {
 		 						$("#searchResults").append('<a class="search-result-link" href="' + linkAddress + '"><div class="search-result-div">' + sSnippet + '</div></a>');
 		 					});
 
+							//pagination
+							//numfound / 10 = number of pages needed
+							//Better to do with next button? Or pagination?
+							/*if (document.getElementById(name)) {
+								var prevStart = $("#showMoreButton").innerHTML;
+								//get start value (and stuff after) then replace non digits with nothing
+								console.log(prevStart.substr(prevStart.indexOf("&start=") + 7, 3)); //check if correct positioning
+								prevStart = prevStart.substr(prevStart.indexOf("&start=") + 7, 3).replaceAll("\\D+","");
+								if data.response.numfound / 10 > previous showmorebutton start value {
+									data.
+								} else {
+									//delete show more button
+
+								}
+							} else {
+								//create first show more button
+
+							}
 		 				} else { // no search results message
 							console.log(queryTerm);
 							//check if this works with the trimmed queryTerm
@@ -130,7 +150,7 @@ function getSearchresults(q) {
 								$("#back-to-toc").removeClass("hidden");
 								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>' + 'There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p></div>');
 							}
-						}
+						}*/
 
 		     },
 		     error: function (xhr, ajaxOptions, thrownError) { //Add these parameters to display the required response
