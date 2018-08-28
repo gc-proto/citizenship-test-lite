@@ -280,7 +280,7 @@
 
 			       //filter data by para_id_s
 			       //each doc has an id number. So what I need to do is create an array
-			       var sort_by = function (field, reverse, primer){
+			       /*var sort_by = function (field, reverse, primer){
 
 			          var key = primer ?
 			              function(x) {return primer(x[field])} :
@@ -296,7 +296,7 @@
 			       sort_by('para_id_s', false, function(a) {
 			         //a - change to integer
 			          return a.toUpperCase();
-			        }));
+			        }));*/
 
 			       var queryTerm = data.responseHeader.params.q.substring(1, data.responseHeader.params.q.length - 1); //remove ""
 			       console.log(queryTerm);
@@ -781,7 +781,7 @@ $stickyEl.toggleClass('overfooter', $footerDiv.offset().top < scrollPosition);
 });
 
 </script>
-<script src="find_custom2.js"></script>
+<script src="../../../../../../js/longdoc-search.js"></script>
 
 
 </body>
