@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
  // get the URL aprameters for ID and Lang then return API JSON
 
  var jsonfromsearch = getSearchresults(q);
- console.log(q);
 
 });
 /* how to use the parsed parameters in a function*/
@@ -64,24 +63,40 @@ function getSearchresults(q) {
 								return a.toUpperCase();
 							}));*/
 
+
+
 						 var queryTerm = data.responseHeader.params.q.substring(1, data.responseHeader.params.q.length - 1); //remove ""
-						 console.log(queryTerm);
-						 console.log(data.responseHeader.params.q);
 						 if (data.response.numFound > 0) { // check if there are search results
 							$("#back-to-toc").removeClass("hidden");
 		 					$("#resultsNumber").append(data.response.numFound + ' results for "' + queryTerm + '"');
 		 					var header = "definescopeoutsideeach"; //random term so that we can evaluate new section
 		 					//$("#searchResults").append('<div class="search-results-header-div"><p class="search-results-header-p">Results for <strong>Canada\'s History</strong></p></div>');
-							console.log(header);
+
+
+              //*******************************************************************
+              //Specifically for prototype testing - Canadian flag workaround without reindexing
+              //*******************************************************************
+
+
+              if (queryTerm.indexOf("flag") > -1) {
+                console.log("hi");
+                //find and replace the element with
+                $.each(data.response.docs, function(i, f) {
+                  if (f.body_txt_en.toLowerCase().indexOf("the current canadian flag was raised for the first time in") > -1) {
+                    f.body_txt_en = "The current Canadian flag, consisting of a red maple leaf against a white square bordered by 2 red rectangles, became the official Canadian flag in 1965. The red-white-red pattern comes from the flag of the Royal Military College, Kingston, founded in 1876. Red and white had been colours of France and England since the Middle Ages and the national colours of Canada since 1921. The Union Jack is our official Royal Flag. The Canadian Red Ensign served as the Canadian flag for about 100&nbsp;years. The provinces and territories also have flags that embody their distinct traditions."
+                  }
+                });
+              }
+              //*/
+              //*******************************************************************
+              //*******************************************************************
+
 							$.each(data.response.docs, function(i, f) {
 								if (f.title_s != header) {
-									console.log(header);
-									console.log(f.title_s);
 		 							header = f.title_s;
 		 							$("#searchResults").append('<div style="margin-top:15px; clear:both;"><p style="font-size:18px;">Results for <strong>' + header.substring(header.indexOf(" - ") + 3, header.lastIndexOf(" - ")) + '</strong></p></div>');
 		 						}
 		 						//get 45 characters before and after search term in returned paragraph, or beginning/end of snippet if it doesn't go that far.
-								console.log(f.body_txt_en.toLowerCase().indexOf(queryTerm));
 								if (f.body_txt_en.toLowerCase().indexOf(queryTerm.toLowerCase()) < 45) {
 		 							var iStart = 0;
 		 						} else {
@@ -119,12 +134,10 @@ function getSearchresults(q) {
 		 					});
 
 		 				} else { // no search results message
-							console.log(queryTerm);
 							//check if this works with the trimmed queryTerm
 							if (queryTerm === "" || queryTerm === "undefined" ) {
 								//What I actually want to do is show the TOC class when undefined, as if there was no search done
 								$("#table-of-contents").removeClass("hidden");
-								console.log("undefined query");
 								//$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>Please enter a word or phrase to find it within this document.</strong></p></div>');
 							} else {
 								$("#back-to-toc").removeClass("hidden");
@@ -140,7 +153,6 @@ function getSearchresults(q) {
 		     },
 		 });
 		 return;
-		 console.log("hi");
 };
 var getUrlParameter = function getUrlParameter(sParam) {
    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
