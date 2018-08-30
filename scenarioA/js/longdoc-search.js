@@ -79,6 +79,7 @@ function getSearchresults(q) {
 
 
               if (queryTerm.indexOf("flag") > -1) {
+                $("#table-of-contents").addClass("hidden");
                 console.log("hi");
                 //find and replace the element with
                 $.each(data.response.docs, function(i, f) {
@@ -148,6 +149,7 @@ function getSearchresults(q) {
 								$("#table-of-contents").removeClass("hidden");
 								//$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>Please enter a word or phrase to find it within this document.</strong></p></div>');
 							} else {
+                $("#table-of-contents").addClass("hidden");
 								$("#back-to-toc").removeClass("hidden");
 								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>' + 'There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p></div>');
 							}
@@ -180,7 +182,7 @@ function make_base_auth(user, password) {
   return "Basic " + hash;
 };
 function backtoToc () {
-		$("#table-of-contents").removeClass("hidden");
+    $("#table-of-contents").removeClass("hidden");
 		$("#searchResults").addClass("hidden");
 		$("#resultsNumber").addClass("hidden");
 		$("#back-to-toc").addClass("hidden");
