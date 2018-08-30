@@ -108,9 +108,6 @@ function getSearchresults(q) {
 		 							var iEnd = f.body_txt_en.toLowerCase().indexOf(queryTerm.toLowerCase()) + queryTerm.length + 45;
 		 						}
 
-								//bold or highlight search term in result panels
-
-
 		 						var sSnippet = f.body_txt_en.substring(iStart, iEnd);
 
 		 						// if iStart = 0 or iEnd = f.body_text_en.length, then ellipsis
@@ -121,6 +118,12 @@ function getSearchresults(q) {
 		 							var sSnippet = sSnippet.substring(0, sSnippet.lastIndexOf(" ")) + '...'; //to nearest space
 		 						}
 
+                //bold or highlight search term in result panels
+                var beforeTermSplice = sSnippet.substring(0, sSnippet.toLowerCase().indexOf(queryTerm.toLowerCase()));
+                var TermSplice = sSnippet.substring(sSnippet.toLowerCase().indexOf(queryTerm.toLowerCase()), (sSnippet.toLowerCase().indexOf(queryTerm.toLowerCase()) + queryTerm.length))
+                var afterTermSplice = sSnippet.substring((sSnippet.toLowerCase().indexOf(queryTerm.toLowerCase()) + queryTerm.length), sSnippet.length)
+                sSnippet = beforeTermSplice + "<b>" + TermSplice + "</b>" + afterTermSplice;
+
 								//Add "txthl=?" to the string, so that we still get the results
 								//they have a f.para_id_s variable I can now use, which is the id
 								var linkbase = f.id.substring(0, f.id.indexOf("#para-"));
@@ -129,6 +132,11 @@ function getSearchresults(q) {
 								/*if (window.location.href.substring(0, 3) != "http") {
 			 						var linkAddress = window.location.href + anchorid;
 								}*/
+
+
+                //bold search term in sSnippet
+
+
 
 		 						$("#searchResults").append('<a class="search-result-link" href="' + linkAddress + '"><div class="search-result-div">' + sSnippet + '</div></a>');
 		 					});
