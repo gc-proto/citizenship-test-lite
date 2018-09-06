@@ -178,7 +178,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 function make_base_auth(user, password) {
   var tok = user + ':' + password;
-  var hash = btoa(tok);
+  //var hash = btoa(tok);
+  var hash = Buffer.from(tok).toString('base64');
   return "Basic " + hash;
 };
 function backtoToc () {
