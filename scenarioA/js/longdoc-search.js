@@ -29,12 +29,12 @@ function getSearchresults(q) {
 		     type: "GET", //This is what you should change
 				 crossDomain: true,
 				 dataType: "json",
-				 headers: {
-				    "Authorization": "Basic " + Buffer.from("search" + ":" + "RuXbgK6?Xa@[QEbl").toString('base64')
-				 },
-					/*beforeSend: function (xhr){
+         // headers: {
+				 //    "Authorization": "Basic " + Buffer.from("search" + ":" + "RuXbgK6?Xa@[QEbl").toString('base64')
+				 // },
+				 beforeSend: function (xhr){
 		        xhr.setRequestHeader('Authorization', make_base_auth("search", "RuXbgK6?Xa@[QEbl"));
-		     },*/
+		     },
 		     /*username: "search", // Most SAP web services require credentials
 		     password: "RuXbgK6?Xa@[QEbl",*/
 		     /*processData: false,*/
