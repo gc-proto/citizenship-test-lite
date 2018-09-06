@@ -30,7 +30,7 @@ function getSearchresults(q) {
 				 crossDomain: true,
 				 dataType: "json",
 				 headers: {
-				    "Authorization": "Basic " + jQuery.base64.encode("search" + ":" + "RuXbgK6?Xa@[QEbl")
+				    "Authorization": "Basic " + btoa("search" + ":" + "RuXbgK6?Xa@[QEbl")
 				 },
 					/*beforeSend: function (xhr){
 		        xhr.setRequestHeader('Authorization', make_base_auth("search", "RuXbgK6?Xa@[QEbl"));
