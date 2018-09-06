@@ -184,7 +184,9 @@ function make_base_auth(user, password) {
   if (window.btoa) {
     var hash = window.btoa(credString);
   } else { //for <= IE9
-    var hash = jQuery.base64.encode(credString);
+    $.getScript("jQuery.base64.js", function() {
+       var hash = jQuery.base64.encode(credString);
+    });
   }
 
   //var hash = btoa(credString);
