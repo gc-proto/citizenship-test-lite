@@ -181,7 +181,13 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 function make_base_auth(user, password) {
   var credString = user + ':' + password;
-  var hash = btoa(credString);
+  if (window.btoa) {
+    var hash = window.btoa(credString);
+  } else { //for <= IE9
+    var hash = jQuery.base64.encode(credString);
+  }
+
+  //var hash = btoa(credString);
   return "Basic " + hash;
 };
 function backtoToc () {
