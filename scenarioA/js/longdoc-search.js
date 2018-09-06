@@ -29,14 +29,17 @@ function getSearchresults(q) {
 		     type: "GET", //This is what you should change
 				 crossDomain: true,
 				 dataType: "json",
-         // headers: {
-				 //    "Authorization": "Basic " + Buffer.from("search" + ":" + "RuXbgK6?Xa@[QEbl").toString('base64')
-				 // },
-				 /*beforeSend: function (xhr){
+         headers: {
+				    "Authorization": make_base_auth("search", "RuXbgK6?Xa@[QEbl")
+				 },
+         /*headers: {
+				    "Authorization": "Basic " + Buffer.from('Hello World!').toString('base64')jQuery.base64.encode()
+				 },*/
+					/*beforeSend: function (xhr){
 		        xhr.setRequestHeader('Authorization', make_base_auth("search", "RuXbgK6?Xa@[QEbl"));
 		     },*/
-		     username: "search", // Most SAP web services require credentials
-		     password: "RuXbgK6?Xa@[QEbl",
+		     /*username: "search", // Most SAP web services require credentials
+		     password: "RuXbgK6?Xa@[QEbl",*/
 		     /*processData: false,*/
 		     success: function (data) {
 						 /*process search results json here!!*/
@@ -176,12 +179,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
        }
    }
 };
-// function make_base_auth(user, password) {
-//   var tok = user + ':' + password;
-//   //var hash = btoa(tok);
-//   var hash = Buffer.from(tok).toString('base64');
-//   return "Basic " + hash;
-// };
+function make_base_auth(user, password) {
+  var credString = user + ':' + password;
+  var hash = btoa(credString);
+  return "Basic " + hash;
+};
 function backtoToc () {
     $("#table-of-contents").removeClass("hidden");
 		$("#searchResults").addClass("hidden");
