@@ -188,7 +188,7 @@ function make_base_auth(user, password) {
        var hash = jQuery.base64.encode(credString);
     });
   }
-
+  console.log("Basic " + hash);
   //var hash = btoa(credString);
   return "Basic " + hash;
 };
