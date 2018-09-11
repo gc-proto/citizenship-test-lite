@@ -200,3 +200,17 @@ function backtoToc () {
 		//remove highlighting
 		//Not sure how????
 };
+
+function submitForm()
+{
+    var urlParam = "txthl="+document.getElementById("nickname").value;
+		var cUrl = window.location.href;
+		if (cUrl.substring(cUrl.length - 4, cUrl.length) != "html") {
+			cUrl = cUrl.substring(0, cUrl.indexOf(".html")+5);
+			console.log(cUrl);
+		}
+		var URL = cUrl;
+    var encordedUrl = URL+"?"+encodeURI( urlParam );
+		console.log("hi");
+    document.location.href = encordedUrl;
+};

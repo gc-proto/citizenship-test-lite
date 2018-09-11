@@ -269,12 +269,12 @@
 					<p><a href="#" style="font-size: 16px;"><!--Découvrir le Canada: en -->Français</a></p>
 					<p>Search within the document</p>
 					<!--document search box-->
-					<form>
+					<!--<form>
 						<div class="input-group" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
 							<input type="text" id="fwtext-overlay" style="border: none;box-shadow: none;float: left; width: 100%;">
 							<button type="button" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;">Find</button>
 						</div>
-					</form>
+					</form>-->
 
 					<!-- search html -->
 					<!-- ÷	Type in text to find: -->
@@ -476,24 +476,26 @@
 			<p style="font-size:20px; margin-top:22px;">Search the study guide</p>
 			<!--document search box-->
 
-			<!-- search
-
-			<form id="find-in-doc">
-				<div class="input-group" style="clear: both;height: 37px;padding: 0px 0px 0px 12px;font-size: 16px;line-height: 1.4375;color: #888;background-color: #fff;background-image: none;border: 1px solid #335075;border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);margin-left: auto; width:100%;padding-top: 5px;padding-bottom: 4px;display: flex;float: left;">
-					<input type="text" name="txthl" style="border: none;box-shadow: none;float: left; width: 100%;">
-					<button type="submit" style="float:left;background: none!important;border: none!important;border-left: #cbbebe 1px solid!important;padding-left: 8px!important; color: black;">Find</button>
-				</div>
-			</form>-->
-
+			<!--search using %20 instead of +-->
 			<form id="find-in-doc" class="form-inline">
-				<label for="btngrp-search2" class="wb-inv">Search the study guide</label>
+			  <label for="btngrp-search2" class="wb-inv">Search the study guide</label>
+			  <div class="input-group" style="width:100%;">
+			    <input type="text" id="nickname" class="form-control" id="btngrp-search2" placeholder="" />
+			    <span class="input-group-btn">
+			      <button class="btn btn-primary" onclick="submitForm()" type="button">Find</button>
+			    </span>
+			  </div>
+			</form>
+			<!-- stardard + parameter encoding-->
+			<!--<form id="find-in-doc" class="form-inline">
+				<label for="btngrp-search2" class="wb-inv">Search within this document</label>
 				<div class="input-group" style="width:100%;">
-					<input type="text" name="txthl" class="form-control" id="btngrp-search2" placeholder="" />
+					<input type="text" name="txthl" class="form-control" id="btngrp-search2" />
 					<span class="input-group-btn">
 						<button type="submit" class="btn btn-primary" type="button">Find</button>
 					</span>
 				</div>
-			</form>
+			</form>-->
 
 			<div style="margin-top:20px; clear:both;"><p id="resultsNumber" style="font-size:20px;"></p></div>
 			<div id="searchResults"></div>
@@ -748,10 +750,8 @@ $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
 var scrollPosition = $(window).height() + $(window).scrollTop();
 $stickyEl.toggleClass('overfooter', $footerDiv.offset().top < scrollPosition);
 });
-
 </script>
 <script src="../../../../../../js/longdoc-search.js"></script>
-
 
 <script src="https://gc-proto.github.io/citizenship-test-lite/scenarioA/js/cannedsearch-querystring.js"></script></body>
 </html>

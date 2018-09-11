@@ -151,7 +151,7 @@ function getSearchresults(q) {
 							} else {
                 $("#table-of-contents").addClass("hidden");
 								$("#back-to-toc").removeClass("hidden");
-								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>' + 'There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p></div>');
+								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>' + 'There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p><p>The search looks for your exact phrase. Try searching fewer keywords.</p></div>');
 							}
 						}
 
