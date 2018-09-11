@@ -479,10 +479,10 @@
 			<!--search using %20 instead of +-->
 			<form id="find-in-doc" class="form-inline">
 			  <label for="btngrp-search2" class="wb-inv">Search the study guide</label>
-			  <div class="input-group" style="width:100%;">
+			  <div class="input-group" id="nickname2" style="width:100%;">
 			    <input type="text" id="nickname" class="form-control" id="btngrp-search2" placeholder="" />
 			    <span class="input-group-btn">
-			      <button class="btn btn-primary" onclick="submitForm()" type="button">Find</button>
+			      <button class="btn btn-primary" id="docsearchbutton" name="docsearchbutton" onclick="submitForm()" type="button">Find</button>
 			    </span>
 			  </div>
 			</form>
@@ -740,6 +740,21 @@
 <script src="https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.min.js"></script>
 <script src="../../../../js/data-inview.min.js"></script>
 <script>
+//When 'enter' hit on keyboard when putting in search term, search within doc
+var searchinput = document.getElementById("nickname");
+// Execute a function when the user releases a key on the keyboard
+searchinput.addEventListener("keyup", function(event) {
+  // Cancel the default action, if needed
+  console.log("um, hu?");
+  event.preventDefault();
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Trigger the button element with a click
+		console.log("um, hu? 2");
+		//document.getElementById("docsearchbutton").click();
+  }
+});
+
 var $window = $(window),
 $stickyEl = $('#desktop-left-toc'),
 $footerDiv = $('#footer-div'),
@@ -751,6 +766,7 @@ var scrollPosition = $(window).height() + $(window).scrollTop();
 $stickyEl.toggleClass('overfooter', $footerDiv.offset().top < scrollPosition);
 });
 </script>
+
 <script src="../../../../../../js/longdoc-search.js"></script>
 
 <script src="https://gc-proto.github.io/citizenship-test-lite/scenarioA/js/cannedsearch-querystring.js"></script></body>

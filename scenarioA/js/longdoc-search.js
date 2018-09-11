@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
  var jsonfromsearch = getSearchresults(q);
 
 });
+
 /* how to use the parsed parameters in a function*/
 function getSearchresults(q) {
    var base = 'https://ca-gov-staging.c.lucidworks.cloud/api/query/goc-paragraphs-demo';
@@ -155,7 +156,7 @@ function getSearchresults(q) {
 							} else {
                 $("#table-of-contents").addClass("hidden");
 								$("#back-to-toc").removeClass("hidden");
-								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p">Results for <strong>' + 'There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p></div>');
+								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p"><strong>There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p><p><strong>The search matches your exact phrase. Try searching fewer keywords.</strong></p></div>');
 							}
 						}
 
