@@ -73,7 +73,7 @@ function getSearchresults(q) {
 						 if (data.response.numFound > 0) { // check if there are search results
 							$("#back-to-toc").removeClass("hidden");
               $("#table-of-contents").addClass("hidden");
-		 					$("#resultsNumber").append(data.response.numFound + ' results for "' + queryTerm + '"');
+		 					$("#resultsNumber").append(data.response.numFound + ' results for "' + queryTerm.trim() + '"');
 		 					var header = "definescopeoutsideeach"; //random term so that we can evaluate new section
 		 					//$("#searchResults").append('<div class="search-results-header-div"><p class="search-results-header-p">Results for <strong>Canada\'s History</strong></p></div>');
 
@@ -156,7 +156,7 @@ function getSearchresults(q) {
 							} else {
                 $("#table-of-contents").addClass("hidden");
 								$("#back-to-toc").removeClass("hidden");
-								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p"><strong>There are no results for ' + data.responseHeader.params.q + ' in this document.</strong></p><p><strong>The search matches your exact phrase. Try searching fewer keywords.</strong></p></div>');
+								$("#searchResults").append('<div class="no-results-div"><p class="no-results-p"><strong>There are 0 results for "' + queryTerm.trim() + '" in this document.</strong></p><p><strong>The search matches your exact phrase. Try searching fewer keywords.</strong></p></div>');
 							}
 						}
 
@@ -205,14 +205,25 @@ function backtoToc () {
 
 function submitForm()
 {
-    var urlParam = "txthl="+document.getElementById("nickname").value;
+    var urlParam = "txthl=%20"+document.getElementById("nickname").value;
 		var cUrl = window.location.href;
 		if (cUrl.substring(cUrl.length - 4, cUrl.length) != "html") {
 			cUrl = cUrl.substring(0, cUrl.indexOf(".html")+5);
-			console.log(cUrl);
 		}
 		var URL = cUrl;
-    var encordedUrl = URL+"?"+encodeURI( urlParam );
-		console.log("hi");
+    var encordedUrl = URL+"?"+encodeURI( urlParam ) + "%20";
     document.location.href = encordedUrl;
 };
+
+//When 'enter' hit on keyboard when putting in search term, search within doc
+var searchinput = document.getElementById("nickname");
+// Execute a function when the user releases a key on the keyboard
+searchinput.addEventListener("keydown", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+		event.preventDefault();
+    // Trigger the button element with a click
+		document.getElementById("docsearchbutton").click();
+  }
+});
