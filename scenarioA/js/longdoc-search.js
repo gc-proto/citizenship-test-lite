@@ -71,6 +71,7 @@ function getSearchresults(q) {
 						 var queryTerm = data.responseHeader.params.q.substring(1, data.responseHeader.params.q.length - 1); //remove ""
 						 if (data.response.numFound > 0) { // check if there are search results
 							$("#back-to-toc").removeClass("hidden");
+              $("#table-of-contents").addClass("hidden");
 		 					$("#resultsNumber").append(data.response.numFound + ' results for "' + queryTerm + '"');
 		 					var header = "definescopeoutsideeach"; //random term so that we can evaluate new section
 		 					//$("#searchResults").append('<div class="search-results-header-div"><p class="search-results-header-p">Results for <strong>Canada\'s History</strong></p></div>');
