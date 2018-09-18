@@ -676,47 +676,62 @@
 		<aside class="visible-lg visible-md" data-inview="top-bar" id="desktop-left-toc" role="complementary">
 
 			<header class="modal-header visible-xs visible-sm">
-			<h2 class="modal-title" style="color:black; font-size:20px!important;">Citizenship test study guide</h2>
-			</header>
+
+				<h2>Citizenship test study guide</h2>
+
+			</header><!-- .modal-header -->
 
 			<div class="modal-body">
 
-				<h4>Search this document</h4>
+				<div id="documentsearch">
 
-				<form id="find-in-doc" class="form-inline">
-					<label for="btngrp-search2" class="wb-inv">Search</label>
-					<div class="input-group">
-						<input type="text" name="txthl" class="form-control" id="btngrp-search2" />
-						<span class="input-group-btn">
-							<button type="submit" class="btn btn-default" type="button">Find</button>
-						</span>
-					</div>
-				</form>
+					<h4>Search this document</h4>
 
-				<div style="clear:both;"><p id="resultsNumber" style="font-size:20px;"></p></div>
-				<div id="searchResults"></div>
+					<form id="find-in-doc" class="form-inline">
+						<label for="btngrp-search2" class="wb-inv">Search</label>
+						<div class="input-group">
+							<input type="text" name="txthl" class="form-control" id="btngrp-search2" />
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-default" type="button">Find</button>
+							</span>
+						</div>
+					</form>
 
-				<div class="" id="table-of-contents">
-				<h4>Chapters</h4>
-				<p><a href="notice.html" class="longdoc-toc-link">Notice</a></p>
-				<p><a href="understanding-the-oath.html" class="longdoc-toc-link">Oath of Citizenship</a></p>
-				<p><a href="message-readers.html" class="longdoc-toc-link">Message</a></p>
-				<p><a href="applying-for-citizenship.html" class="longdoc-toc-link">Applying for Citizenship</a></p>
-				<p><a href="rights-responsibilities-citizenship.html" class="longdoc-toc-link">Chapter 1 - Rights and Responsibilities of Citizenship</a></p>
-				<p><a href="who-we-are.html" class="longdoc-toc-link">Chapter 2 - Who We Are</a></p>
-				<p><a href="canada-history.html" class="longdoc-toc-link">Chapter 3 - Canada's History</a></p>
-				<p><a href="modern-canada.html" class="longdoc-toc-link">Chapter 4 - Modern Canada</a></p>
-				<p><a href="how-canadians-govern-themselves.html" class="longdoc-toc-link">Chapter 5 - How Canadians Govern Themselves</a></p>
-				<p><a href="federal-elections.html" class="longdoc-toc-link">Chapter 6 - Federal Elections</a></p>
-				<p><a href="the-justice-system.html" class="longdoc-toc-link">Chapter 7 - The Justice System</a></p>
-				<p><a href="canadian-symbols.html" class="longdoc-toc-link">Chapter 8 - Canadian Symbols</a></p>
-				<p><a href="canada-economy.html" class="longdoc-toc-link active">Chapter 9 - Canada's Economy</a></p>
-				<p class="longdoc-toc-sub-p"><a href="#heading13-1" class="longdoc-toc-sub-link">A Trading Nation</a></p>
-				<p class="longdoc-toc-sub-p"><a href="#heading13-2" class="longdoc-toc-sub-link">Canada's economy includes 3 main types of industries</a></p>
-				<p><a href="canada-regions.html" class="longdoc-toc-link">Chapter 10 - Canada's Regions</a></p>
-				<p><a href="for-more-info.html" class="longdoc-toc-link">For More Information and acknowledgements</a></p>
-				<p><a href="authorities.html" class="longdoc-toc-link">Authorities</a></p>
-				<p><a href="memorable-quotes.html" class="longdoc-toc-link">Memorable Quotes</a></p>
+					<div style="clear:both;"><p id="resultsNumber" style="font-size:20px;"></p></div>
+
+					<div id="searchResults"></div>
+
+				</div><!-- #documentsearch -->
+
+				<div id="chapters">
+
+					<h4>Chapters</h4>
+
+					<ul>
+					<li><a href="notice.html">Notice</a></li>
+					<li><a href="understanding-the-oath.html">Oath of Citizenship</a></li>
+					<li><a href="message-readers.html">Message</a></li>
+					<li><a href="applying-for-citizenship.html">Applying for Citizenship</a></li>
+					<li><a href="rights-responsibilities-citizenship.html">Chapter 1 - Rights and Responsibilities of Citizenship</a></li>
+					<li><a href="who-we-are.html">Chapter 2 - Who We Are</a></li>
+					<li><a href="canada-history.html">Chapter 3 - Canada's History</a></li>
+					<li><a href="modern-canada.html">Chapter 4 - Modern Canada</a></li>
+					<li><a href="how-canadians-govern-themselves.html">Chapter 5 - How Canadians Govern Themselves</a></li>
+					<li><a href="federal-elections.html">Chapter 6 - Federal Elections</a></li>
+					<li><a href="the-justice-system.html">Chapter 7 - The Justice System</a></li>
+					<li><a href="canadian-symbols.html">Chapter 8 - Canadian Symbols</a></li>
+					<li><a href="canada-economy.html" class="active">Chapter 9 - Canada's Economy</a>
+						<ul>
+						<li><a href="#heading13-1">A Trading Nation</a></li>
+						<li><a href="#heading13-2">Canada's economy includes 3 main types of industries</a></li>
+						</ul>
+						</li>
+					<li><a href="canada-regions.html">Chapter 10 - Canada's Regions</a></li>
+					<li><a href="for-more-info.html">For More Information and acknowledgements</a></li>
+					<li><a href="authorities.html">Authorities</a></li>
+					<li><a href="memorable-quotes.html">Memorable Quotes</a></li>
+					</ul>
+
 				</div>
 
 				<div id="back-to-toc" class="hidden" style="margin-top:10px;"><a onClick="backtoToc()" class="btn" style="background-color:#ececec;">Back to table of contents</a></div>
